@@ -46,8 +46,8 @@ node ./bin/gltf-pipeline.js -i ./specs/data/boxTexturedUnoptimized/CesiumTexture
 |`--help`, `-h`|Display help  显示帮助|No|
 |`--input`, `-i`|input=PATH, Read unoptimized glTF from the specified file.  input = PATH，从指定文件读取未优化的glTF|:white_check_mark: Yes|
 |`--output`, `-o`|output=PATH, Write optimized glTF to the specified file.  输出= PATH，将优化的glTF输出到指定的文件|No|
-|`--binary`, `-b`|Write binary glTF file using KHR_binary_glTF extension. 使用KHR_binary_glTF扩展名编写一个二进制glTF文件|No, default `false`|
-|`--separate`, `-s`|Write separate geometry/animation data files, shader files, and textures instead of embedding them in the glTF asset.|No, default `false`|
+|`--binary`, `-b`|Write binary glTF file using KHR_binary_glTF extension. 使用KHR_binary_glTF扩展编写一个二进制glTF文件|No, default `false`|
+|`--separate`, `-s`|Write separate geometry/animation data files, shader files, and textures instead of embedding them in the glTF asset.  <br>编写独立的几何/动画数据文件，着色器文件和纹理，而不是将它们嵌入到glTF资源中|No, default `false`|
 |`--separateImage`, `-t`|Write out separate textures, but embeds geometry/animation data files and shader files in the glTF asset.|No, default `false`|
 |`--quantize`, `-q`|Quantize the attributes of this glTF asset using the WEB3D_quantized_attributes extension.|No, default `false`|
 |`--encodeNormals`, `-n`|Oct-encode the normals of this glTF asset.|No, default `false`|
