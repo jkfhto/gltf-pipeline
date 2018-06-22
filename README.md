@@ -72,17 +72,21 @@ node ./bin/gltf-pipeline.js -i ./specs/data/boxTexturedUnoptimized/CesiumTexture
 |`--texcomp.<format>.blockSize`|The block size for astc compression. Smaller block sizes result in higher bitrates. This value is ignored if `options.bitrate` is also set. Must be one of the following: `4x4`, `5x4`, `5x5`, `6x5`, `6x6`, `8x5`, `8x6`, `8x8`, `10x5`, `10x6`, `10x8`, `10x10`, `12x10`, `12x12`  <br>astc压缩的块大小。较小的块大小会导致较高的比特率。如果options.bitrate也被设置，这个值将被忽略。必须是以下之一|No, default `8x8`|
 |`--texcomp.<format>.alphaBit`|Store a single bit for alpha. Only supported for etc2.  <br>存储一个alpha值。只支持etc2|No, default `false`|
 
-## Build Instructions
+## Build Instructions  构建说明
 
-Run the tests:
+Run the tests:  运行测试
 ```
 npm run test
 ```
-To run ESLint on the entire codebase, run:
+To run ESLint on the entire codebase, run:  
+
+要在整个代码库上运行ESLint，请运行
 ```
 npm run eslint
 ```
 To run ESLint automatically when a file is saved, run the following and leave it open in a console window:
+
+要在保存文件时自动运行ESLint，请运行以下命令并将其保留在控制台窗口中打开
 ```
 npm run eslint-watch
 ```
@@ -90,18 +94,24 @@ npm run eslint-watch
 ### Building for Cesium integration
 
 Some functionality of gltf-pipeline is used by Cesium as a third party library. The necessary files can be generated using:
+
+gltf-pipeline的一些功能被Cesium使用作为第三方库。必要的文件可以使用以下方式生成
 ```
 npm run build-cesium
 ```
 
 This will output a portion of the gltf-pipeline code into the `dist/cesium` folder, reformatted into AMD style for use with RequireJS and Cesium in the browser.
 
-### Third-party tools
+这会将部分gltf-pipeline代码输出到dist / cesium文件夹中，重新格式化为AMD风格，以便在浏览器中与RequireJS和Cesium一起使用
+
+### Third-party tools  第三方工具
 
 This project bundles several native binaries for texture compression.
 
-* [PVRTexTool](https://community.imgtec.com/developers/powervr/tools/pvrtextool/) - Windows, macOS, and Linux binaries are provided by the PowerVR SDK.
-* [etc2comp](https://github.com/google/etc2comp) - Windows, macOS, and Linux binaries built from source.
+该项目捆绑了几个本地二进制文件进行纹理压缩
+
+* [PVRTexTool](https://community.imgtec.com/developers/powervr/tools/pvrtextool/) - Windows, macOS, and Linux binaries are provided by the PowerVR SDK.Windows，macOS和Linux二进制文件由PowerVR SDK提供
+* [etc2comp](https://github.com/google/etc2comp) - Windows, macOS, and Linux binaries built from source.从源代码构建Windows，macOS和Linux的二进制文件
 * [crunch](https://github.com/BinomialLLC/crunch) - Windows binary built from [crunch](https://github.com/BinomialLLC/crunch), macOS binary built from [BKcore/crunch-osx](https://github.com/BKcore/crunch-osx), Linux binary built from [tomerb/linux_fixes](https://github.com/tomerb/crunch/tree/linux_fixes).
 * [astc-encoder](https://github.com/ARM-software/astc-encoder) - Windows, macOS, and Linux binaries built from source.
 
@@ -109,46 +119,66 @@ On Linux you may need to install g++ 4.8 as some of the tools link to the libgcc
 
 Run the help command for each tool for a more detailed description of the supported command-line options.
 
-### Building for other integration
+对每个工具运行help命令以获得对受支持命令行选项的更详细描述
+
+### Building for other integration  建设其他一体化
 
 Some functionality of gltf-pipeline is used by other projects along with Cesium as a third party library. The necessary files can be generated using:
+
+其他项目使用gltf-pipeline的一些功能以及Cesium作为第三方库。必要的文件可以使用以下方式生成
 ```
 npm run build-cesium-combine
 ```
 
 This will output a portion of the gltf-pipeline code into the `dist/cesium-combined` folder, reformatted into self-contained file. Currently, only files that have no other local dependencies are allowed.
 
-### Running Test Coverage
+这会将一部分gltf-pipeline代码输出到dist / cesium组合文件夹中，并重新格式化为自包含文件。目前，只允许没有其他本地依赖项的文件
 
-Coverage uses [nyc](https://github.com/istanbuljs/nyc).  Run:
+### Running Test Coverage  运行测试覆盖率
+
+Coverage uses [nyc](https://github.com/istanbuljs/nyc).  Run:测试覆盖率使用nyc。运行
 ```
-npm run coverage
+npm run coverage  
 ```
-For complete coverage details, open `coverage/lcov-report/index.html`.
+For complete coverage details, open `coverage/lcov-report/index.html`.  有关完整的覆盖详情，请打开
 
 The tests and coverage covers the Node.js module; it does not cover the command-line interface, which is tiny.
 
-## Generating Documentation
+测试和覆盖涵盖了Node.js模块;它并不包含很小的命令行界面
 
-To generate the documentation:
+## Generating Documentation  生成文档
+
+To generate the documentation:  要生成文档
 ```
 npm run jsdoc
 ```
 
-The documentation will be placed in the `doc` folder.
+The documentation will be placed in the `doc` folder. 文档将被放置在doc文件夹中
 
-### Debugging
+### Debugging  调试
 
 * To debug the tests in Webstorm, open the Gulp tab, right click the `test` task, and click `Debug 'test'`.
-* To run a single test, change the test function from `it` to `fit`.
 
-## Deploying to npm
+要在Webstorm中调试测试，请打开Gulp选项卡，右键单击测试任务，然后单击Debug'test'
+* To run a single test, change the test function from `it` to `fit` 要运行单例测试，请将测试方法从`it` 改为 `fit`.
 
-* Proofread [CHANGES.md](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/blob/master/CHANGES.md).
+## Deploying to npm  部署到npm
+
+* Proofread [CHANGES.md](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/blob/master/CHANGES.md).  
+
+  校对CHANGES.MD。
 * Update the `version` in [package.json](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/blob/master/package.json) to match the latest version in [CHANGES.md](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/blob/master/CHANGES.md).
+  
+  更新package.json中的版本以匹配CHANGES.md中的最新版本
 * Make sure to run the tests and ensure they pass.
+  
+  确保运行测试并确保它们通过
 * If any changes are required, commit and push them to the repository.
+
+  如果需要更改，请提交并将其推送到存储库
 * Create and test the package.
+
+  创建并测试包
 ```
 ## NPM Pack
 ## Creates tarball. Verify using 7-zip (or your favorite archiver).
@@ -163,10 +193,10 @@ node -e "var test = require('gltf-pipeline');" # No output on success
 
 # If module has executables, then test those now.
 ```
-* Tag and push the release.
+* Tag and push the release.  标记并推送发布
   * `git tag -a <version> -m "<message>"`
   * `git push origin <version>`
-* Publish
+* Publish  发布
 ```
 npm publish
 ```
