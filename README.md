@@ -10,9 +10,15 @@
 
 Content pipeline tools for optimizing [glTF](https://www.khronos.org/gltf) assets by [Richard Lee](http://leerichard.net/) and the [Cesium team](http://cesiumjs.org/).
 
+Richard Lee和Cesium团队优化glTF文件的内容管道工具
+
 This project is under active development, see the [roadmap](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/issues/1).
 
+该项目正在积极开发中，请参阅路线图
+
 gltf-pipeline can be used as a command-line tool or Node.js module.
+
+gltf-pipeline可以用作命令行工具或Node.js模块
 
 ## Instructions
 
