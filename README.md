@@ -21,36 +21,40 @@ Supports common operations including:  支持常见操作，包括
   将缓冲区/纹理嵌入到gltf或保存到单独的文件
 * Converting glTF 1.0 models to glTF 2.0 (using the [KHR_technique_webgl](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Khronos/KHR_technique_webgl) extension)
 
+  将glTF 1.0模型转换为glTF 2.0（使用KHR_technique_webgl扩展）
+
 TODO: KHR_techniques_webgl - fix name in link once https://github.com/KhronosGroup/glTF/pull/1296 is merged
 
 `gltf-pipeline` can be used as a command-line tool or Node.js module.
 
-## Getting Started
+## Getting Started  入门
 
 Install [Node.js](https://nodejs.org/en/) if you don't already have it, and then:
+
+如果你还没有安装Node.js，请安装：
 ```
 npm install
 ```
 
-### Using gltf-pipeline as a command-line tool:
+### Using gltf-pipeline as a command-line tool:   使用gltf-pipeline作为命令行工具
 
-#### Converting a glTF to glb
+#### Converting a glTF to glb   将glTF转换为glb
 `node bin/gltf-pipeline.js -i model.gltf -o model.glb`
 
 `node bin/gltf-pipeline.js -i model.gltf -b`
 
-#### Converting a glb to glTF
+#### Converting a glb to glTF   将glb转换为glTF
 `node bin/gltf-pipeline.js -i model.glb -o model.gltf`
 
 `node bin/gltf-pipeline.js -i model.glb -j`
 
-#### Converting a glTF to Draco glTF
+#### Converting a glTF to Draco glTF   将glTF转换为Draco glTF
 `node bin/gltf-pipeline.js -i model.gltf -d -s -o modelDraco.gltf`
 
-### Saving separate textures
+### Saving separate textures   保存单独的纹理
 `node bin/gltf-pipeline.js -i model.gltf -t`
 
-### Using gltf-pipeline as a library:
+### Using gltf-pipeline as a library:   使用gltf-pipeline作为库：
 
 #### Converting a glTF to glb:
 
