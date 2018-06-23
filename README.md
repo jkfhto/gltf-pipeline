@@ -36,27 +36,41 @@ Install [Node.js](https://nodejs.org/en/) if you don't already have it, and then
 npm install
 ```
 
-### Using gltf-pipeline as a command-line tool:   使用gltf-pipeline作为命令行工具
+### Using gltf-pipeline as a command-line tool:  
 
-#### Converting a glTF to glb   将glTF转换为glb
+使用gltf-pipeline作为命令行工具
+
+#### Converting a glTF to glb  
+
+将glTF转换为glb
 `node bin/gltf-pipeline.js -i model.gltf -o model.glb`
 
 `node bin/gltf-pipeline.js -i model.gltf -b`
 
-#### Converting a glb to glTF   将glb转换为glTF
+#### Converting a glb to glTF
+
+将glb转换为glTF
 `node bin/gltf-pipeline.js -i model.glb -o model.gltf`
 
 `node bin/gltf-pipeline.js -i model.glb -j`
 
-#### Converting a glTF to Draco glTF   将glTF转换为Draco glTF
+#### Converting a glTF to Draco glTF   
+
+将glTF转换为Draco glTF
 `node bin/gltf-pipeline.js -i model.gltf -d -s -o modelDraco.gltf`
 
-### Saving separate textures   保存单独的纹理
+### Saving separate textures   
+
+保存单独的纹理
 `node bin/gltf-pipeline.js -i model.gltf -t`
 
-### Using gltf-pipeline as a library:   使用gltf-pipeline作为库：
+### Using gltf-pipeline as a library:   
 
-#### Converting a glTF to glb:  将glTF转换为glb
+使用gltf-pipeline作为库：
+
+#### Converting a glTF to glb:  
+
+将glTF转换为glb
 
 ```javascript
 var gltfPipeline = require('gltf-pipeline');
