@@ -43,6 +43,7 @@ npm install
 #### Converting a glTF to glb  
 
 将glTF转换为glb
+
 `node bin/gltf-pipeline.js -i model.gltf -o model.glb`
 
 `node bin/gltf-pipeline.js -i model.gltf -b`
@@ -50,6 +51,7 @@ npm install
 #### Converting a glb to glTF
 
 将glb转换为glTF
+
 `node bin/gltf-pipeline.js -i model.glb -o model.gltf`
 
 `node bin/gltf-pipeline.js -i model.glb -j`
@@ -57,11 +59,13 @@ npm install
 #### Converting a glTF to Draco glTF   
 
 将glTF转换为Draco glTF
+
 `node bin/gltf-pipeline.js -i model.gltf -d -s -o modelDraco.gltf`
 
 ### Saving separate textures   
 
 保存单独的纹理
+
 `node bin/gltf-pipeline.js -i model.gltf -t`
 
 ### Using gltf-pipeline as a library:   
