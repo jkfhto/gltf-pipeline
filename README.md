@@ -56,7 +56,7 @@ npm install
 
 ### Using gltf-pipeline as a library:   使用gltf-pipeline作为库：
 
-#### Converting a glTF to glb:
+#### Converting a glTF to glb:  将glTF转换为glb
 
 ```javascript
 var gltfPipeline = require('gltf-pipeline');
