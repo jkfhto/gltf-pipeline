@@ -10,9 +10,15 @@
 
 Content pipeline tools for optimizing [glTF](https://www.khronos.org/gltf) assets by [Richard Lee](http://leerichard.net/) and the [Cesium team](http://cesiumjs.org/).
 
-Supports common operations including:
-* Converting glTF to glb (and reverse)
+Richard Lee和Cesium团队优化glTF文件的内容管道工具
+
+Supports common operations including:  支持常见操作，包括
+* Converting glTF to glb (and reverse)  
+
+  将glTF转换为glb（和反转）
 * Saving buffers/textures as embedded or separate files
+
+  将缓冲区/纹理嵌入到gltf或保存到单独的文件
 * Converting glTF 1.0 models to glTF 2.0 (using the [KHR_technique_webgl](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Khronos/KHR_technique_webgl) extension)
 
 TODO: KHR_techniques_webgl - fix name in link once https://github.com/KhronosGroup/glTF/pull/1296 is merged
